@@ -46,7 +46,7 @@ In the KAMP_Settings.cfg simply comment out (put a `#` in front) of the `[includ
 This will disable the KAMP-based adaptive meshing and the KAMP bed heating. We don't need KAMP meshing anymore because Klipper can do it 
 natively.
 
-Now to add the new ADAPTIVE_BED_HEAT control, simply download the adaptive_bed_heat.cfg file from **HERE** and copy it to your printer 
+Now to add the new ADAPTIVE_BED_HEAT control, simply download the adaptive_bed_heat.cfg file from [here](./macros/adaptive_bed_heat.cfg) and copy it to your printer 
 config directory. Then open your printer.cfg and add in the line
 
 ```

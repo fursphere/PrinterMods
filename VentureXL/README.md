@@ -175,7 +175,32 @@ do a Cartographer Touch action during your print start routine.
 
 ## Homing Override
 
+I have developed a "universal" HOMING_OVERRIDE config that should be able to be used with most printers. Using this instead of the stock
+safe_z_home isn't strictly necessary but it *will* help avoid situations where you try to home and your Y endstop arm collides with the Z 
+cable chain and breaks.
+
+Changing over is simple. Just go into your printer.cfg and delete or comment out the `[safe_z_home]` section to disable it.
+
+<img width="548" height="242" alt="image" src="https://github.com/user-attachments/assets/61cf65ae-add4-4292-a892-e01f6d2a7330" />
+
+Then download the homing_override.cfg file from [here](./macros/homing_override.cfg) and copy it to your printer 
+config directory. Then open your printer.cfg and add in the line
+
+```
+[include homing_override.cfg]
+```
+
+<img width="433" height="269" alt="image" src="https://github.com/user-attachments/assets/b23d99fa-1515-41a7-acab-4572125a16bc" />
+
+Everything is preconfigured for the VentureXL. If you would like to tweak the behaviour (because you change or mod things in the future)
+just open the homing_override.cfg file and you can change the X/Y/Z hop values, the homing axis order, or set a specific z homing
+location (this would only be used if you removed the Cartographer and used a dedicated Z endstop switch).
+
+<img width="1352" height="489" alt="image" src="https://github.com/user-attachments/assets/4d31215d-c287-43e9-bca4-7e04466aa319" />
+
+
 
 
 ## Hardware mods
 
+when I get around to it....
